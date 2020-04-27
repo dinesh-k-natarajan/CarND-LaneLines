@@ -26,8 +26,11 @@ The goals / steps of this project are the following:
 
 The Lane Detection pipeline using the basic principles of Computer Vision was implemented using helper functions based on the OpenCV library as follows: 
 
-1. The image is first converted to Grayscale
+1. The image is first converted to Grayscale. 
+
 ![alt text][image1]
+
+
 2. Gaussian smoothening is done using Gaussian Blur and parameterized kernel size
 3. Canny Edge Detection is applied on the smooothened grayscale image using tunable threshold parameters
 4. A quadrilateral is used to apply Region Masking to the image with edges to identify the region of interest
@@ -38,8 +41,8 @@ The Lane Detection pipeline using the basic principles of Computer Vision was im
     (c) Now, using the equation for each lane, the vertices for the lanes can be extrapolated using the known values of y (from the vertices of the Region of Interest). 
     (d) Using the newly found coordinates of the lane extremities, the final solid lane markings are superimposed and highlighted on the raw image. 
 7. The final image after passing through the pipeline looks like: 
-![alt text][image2]
 
+![alt text][image2]
 
 
 
