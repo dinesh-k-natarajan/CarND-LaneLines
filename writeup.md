@@ -31,15 +31,21 @@ The Lane Detection pipeline using the basic principles of Computer Vision was im
 ![alt text][image1]
 
 
-2. Gaussian smoothening is done using Gaussian Blur and parameterized kernel size
-3. Canny Edge Detection is applied on the smooothened grayscale image using tunable threshold parameters
-4. A quadrilateral is used to apply Region Masking to the image with edges to identify the region of interest
-5. Hough Transform is performed with the aid of the parameters to identify the lane markings and to display the identified line segments
+2. Gaussian smoothening is done using Gaussian Blur and parameterized kernel size.
+
+3. Canny Edge Detection is applied on the smooothened grayscale image using tunable threshold parameters.
+
+4. A quadrilateral is used to apply Region Masking to the image with edges to identify the region of interest.
+
+5. Hough Transform is performed with the aid of the parameters to identify the lane markings and to display the identified line segments.
+
 6. The draw_lines() function is modified to extrapolate the line segments into single left and right lane lines. The following modifications were made to add this functionality: 
-    (a) The line segments identified by the Hough Transform are split into left and right lane lines based on the slope of the line segments
-    (b) The slopes (m's) and the intercepts(b's) from the equation of a straight line y = mx + c are calculated for each line segment, in order to find the average slope and intercept of the left and right lane group respectively. Thus, an "average" of all the line segments on each lane are found. 
-    (c) Now, using the equation for each lane, the vertices for the lanes can be extrapolated using the known values of y (from the vertices of the Region of Interest). 
-    (d) Using the newly found coordinates of the lane extremities, the final solid lane markings are superimposed and highlighted on the raw image. 
+
+(a) The line segments identified by the Hough Transform are split into left and right lane lines based on the slope of the line segments. 
+(b) The slopes (m's) and the intercepts(b's) from the equation of a straight line y = mx + c are calculated for each line segment, in order to find the average slope and intercept of the left and right lane group respectively. Thus, an "average" of all the line segments on each lane are found. 
+(c) Now, using the equation for each lane, the vertices for the lanes can be extrapolated using the known values of y (from the vertices of the Region of Interest). 
+(d) Using the newly found coordinates of the lane extremities, the final solid lane markings are superimposed and highlighted on the raw image. 
+
 7. The final image after passing through the pipeline looks like: 
 
 ![alt text][image2]
