@@ -41,10 +41,10 @@ The Lane Detection pipeline using the basic principles of Computer Vision was im
 
 6. The draw_lines() function is modified to extrapolate the line segments into single left and right lane lines. The following modifications were made to add this functionality: 
 
-* The line segments identified by the Hough Transform are split into left and right lane lines based on the slope of the line segments. 
-* The slopes (m's) and the intercepts(b's) from the equation of a straight line y = mx + c are calculated for each line segment, in order to find the average slope and intercept of the left and right lane group respectively. Thus, an "average" of all the line segments on each lane are found. 
-* Now, using the equation for each lane, the vertices for the lanes can be extrapolated using the known values of y (from the vertices of the Region of Interest). 
-* Using the newly found coordinates of the lane extremities, the final solid lane markings are superimposed and highlighted on the raw image. 
+  * The line segments identified by the Hough Transform are split into left and right lane lines based on the slope of the line segments. 
+  * The slopes (m's) and the intercepts(b's) from the equation of a straight line y = mx + c are calculated for each line segment, in order to find the average slope and intercept of the left and right lane group respectively. Thus, an "average" of all the line segments on each lane are found. 
+  * Now, using the equation for each lane, the vertices for the lanes can be extrapolated using the known values of y (from the vertices of the Region of Interest). 
+  * Using the newly found coordinates of the lane extremities, the final solid lane markings are superimposed and highlighted on the raw image. 
 
 7. The final image after passing through the pipeline looks like: 
 
